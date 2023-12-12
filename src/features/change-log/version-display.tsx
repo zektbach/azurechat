@@ -14,7 +14,7 @@ export const VersionDisplay = async () => {
           </span>
         ) : (
           <span className="font-normal bg-green-200 rounded-2xl p-1 px-3">
-            You are up to date
+            2023/12/13
           </span>
         )}
       </h1>
