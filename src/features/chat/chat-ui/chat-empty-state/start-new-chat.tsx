@@ -19,9 +19,7 @@ export const StartNewChat: FC<Prop> = (props) => {
         <div className="flex flex-col gap-2">
           <p className="">
             {AI_NAME}にようこそ！<br></br>＋ボタンをクリックすると新しいチャットが開始できます。
-            activities.
           </p>
-          <p>You can start a new chat with me by clicking the button below.</p>
         </div>
         <div className="-mx-5 -mb-5 p-5 flex flex-col border-t bg-muted">
           <NewChat />
