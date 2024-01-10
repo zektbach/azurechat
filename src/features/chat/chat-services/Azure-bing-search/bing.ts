@@ -1,4 +1,4 @@
-import { OpenAIEmbeddingInstance } from "@/features/common/openai"; 
+// import { OpenAIEmbeddingInstance } from "@/features/common/openai"; 
 export class BingSearchResult {
   async  SearchWeb(searchText: string)  {
     var url = "https://api.bing.microsoft.com/v7.0/search?count=10&offset=0&responseFilter=Webpages&setLang=ja-jp&q=";
