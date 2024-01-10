@@ -1,74 +1,25 @@
-# 便利な使い方のご紹介
+# Azure Chat Updates
 
-ChatGPTを上手に使うには命令文（プロンプト）を工夫することで効果が出ます。
-下記のサイトに詳しい使い方が載っていますので是非ご参考ください。
-<a href="https://prompt.quel.jp/index.php?imode=1&theme=&sort=2" target="_blank">ChatGPTなどで使える文例集</a>
+Below are the updates for the Azure Chat Solution accelerator
 
+## 📂 Chat with file
 
-ご参考までにいくつかの命令文のサンプルを記載しました。コピペでぜひお試しください。
+- In the chat with file feature, you can now see citations within the responses. Simply click on the citation to access the related context.
 
-## 📮　社内スケジュール調整の依頼メール
+- You can now upload files to existing chats, allowing you to chat with multiple files simultaneously.
 
-以下の内容でメール文案を書いてくだい。
-社内メールなので簡素にしてください。
-書くために、足りない情報があれば聞いてください。
+## 🎙️ Speech
 
-#内容
-・社内での会議
-・今週中に、開きたい
-・1時間ぐらい
-・時間の候補は、水曜11時、金曜11時、金曜13時
-・希望をお知らせください
+Ability to use Azure Speech in conversations. This feature is not enabled by default. To enable this feature, you must set the environment variable `PUBLIC_SPEECH_ENABLED=true` along with the Azure Speech subscription key and region.
 
-## 🎙️ ビジネス文書を作成するための汎用プロンプト
+```
+PUBLIC_SPEECH_ENABLED=true
+AZURE_SPEECH_REGION="REGION"
+AZURE_SPEECH_KEY="1234...."
+```
 
-あなたは{文書の種類}の業務文書を
-1万件以上書いてきたベテランの専門家です。
+## 🔑 Environment variable change
 
-{提出者}が{提出先と目的}において最高の成果を出すように、
-{内容の要点と背景}を踏まえながら、
-関連するドメイン知識を深く想起しながら、
+Please note that the solution has been upgraded to utilise the most recent version of the OpenAI JavaScript SDK, necessitating the use of the `OPENAI_API_KEY` environment variable.
 
-文書の効果的なフォーマットについて、
-必要そうなポイントを漏らさず詳細に網羅して、
-水平思考を駆使して多角的な視点から、
-肝心なポイントがあれば追加して膨らませて、
-内容を構成的に考えたところで、
-
-それらの内容で、記述的な箇所には1段落の文章を入れ込んで、
-足りない内容があれば創造的に追加補足することにより、
-プロが書いたような、ヌケモレのない、実用性の高い、
-プロフェッショナルな構成のビジネス文書を、
-かっちりとした文体で、真摯な態度で作成してください。
-
-
-【文書の種類】
-・稟議書
-
-【提出者】
-・社員
-
-【提出先と目的】
-・役員会議に提出
-・新しいレーザープリンターの購入
-
-【内容の要点と背景】
-・現状のプリンターは故障が多い、印刷も遅い
-・最新のプリンターで業務効率の改善になる
-
-## 💡 プロンプトで書く文章を提案してもらう
-
-下記の、ChatGPTに求める【リクエスト】に応えるため、
-ChatGPTが最高の成果を出すためには、
-どのようなプロンプトを与えればよいですか？
-リクエストへの直接の回答は不要ですので、
-プロンプトの中身だけを例示してください。 
-No repeat, no remarks, only results, in Japanese
-
-【リクエスト】
-得意先に新製品を説明するときにポイントとなることはなに？
-
-【プロンプトの条件】
-・まず、リクエストを詳細化して
-・私が伝えるべき追加情報があれば、その項目の箇条書きを含めて、
-・ユーザーの立場から、ChatGPTに向けて送信するスタイルの質問文
+Ensure that you update the variable name in both your '.env' file and the configuration within Azure App Service or Key Vault, changing it from `AZURE_OPENAI_API_KEY` to `OPENAI_API_KEY`.
