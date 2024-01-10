@@ -36,16 +36,12 @@ export const ChatMessageEmptyState: FC<Prop> = (props) => {
           </p>
           <ChatStyleSelector disable={false} />
         </div>
-        {session?.user?.isAdmin ? (         
         <div className="flex flex-col gap-2">
           <p className="text-sm text-muted-foreground">
             AIがお手伝いする方法を選択してください。
           </p>
           <ChatTypeSelector disable={false} />
         </div>
-        ) : (
-          <></>
-        )}           
         {showFileUpload === "data" && <ChatFileUI />}
       </Card>
     </div>
