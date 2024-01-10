@@ -68,6 +68,10 @@ Clone this repository locally or fork to your Github account. Run all of the the
    AZURE_SEARCH_INDEX_NAME=
    AZURE_SEARCH_API_VERSION="2023-07-01-Preview"
 
+   # Azure bing search to extract content from your data
+   AZURE_BINGSEARCH_API_KEY=
+
+
    # Azure AI Document Intelligence to extract content from your data
 
    AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT="https://REGION.api.cognitive.microsoft.com/"
