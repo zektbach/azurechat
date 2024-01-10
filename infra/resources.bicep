@@ -12,6 +12,7 @@ param chatGptModelVersion string = '0613'
 param embeddingDeploymentName string = 'text-embedding-ada-002'
 param embeddingDeploymentCapacity int = 30
 param embeddingModelName string = 'text-embedding-ada-002'
+param  bing_apikey string = ''
 
 param speechServiceSkuName string = 'S0'
 param formRecognizerSkuName string = 'S0'
@@ -173,7 +174,7 @@ resource webApp 'Microsoft.Web/sites@2020-06-01' = {
         }
         {
           name: 'AZURE_BINGSEARCH_API_KEY'
-          value: bing.apikey
+          value: bing_apikey
         }
       ]
     }
