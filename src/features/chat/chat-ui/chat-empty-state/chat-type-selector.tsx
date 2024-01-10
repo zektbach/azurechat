@@ -19,7 +19,6 @@ export const ChatTypeSelector: FC<Prop> = (props) => {
       onValueChange={(value) => onChatTypeChange(value as ChatType)}
     >
       <TabsList className="grid w-full grid-cols-2 h-12 items-stretch">
-     {session?.user?.isAdmin ? (         
        <TabsTrigger
           value="simple"
           className="flex gap-1"
@@ -27,9 +26,6 @@ export const ChatTypeSelector: FC<Prop> = (props) => {
         >
           <MessageCircle size={20} /> 通常利用
         </TabsTrigger>    
-        ) : (
-          <></>
-        )}           
         <TabsTrigger
           value="web"
           className="flex gap-1"
