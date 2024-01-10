@@ -8,7 +8,7 @@ export class BingSearchResult {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'Ocp-Apim-Subscription-Key': '' //process.env.AZURE_BINGSEARCH_API_KEY
+          'Ocp-Apim-Subscription-Key': process.env.AZURE_BINGSEARCH_API_KEY
           }});
       return await response.json();
       //const postsData = await response.json();
