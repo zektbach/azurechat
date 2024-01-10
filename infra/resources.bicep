@@ -173,7 +173,7 @@ resource webApp 'Microsoft.Web/sites@2020-06-01' = {
         }
         {
           name: 'AZURE_BINGSEARCH_API_KEY'
-          value: 'bing.apikey'
+          value: bing.apikey
         }
       ]
     }
